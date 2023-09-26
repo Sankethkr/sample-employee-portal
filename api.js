@@ -9,6 +9,7 @@ const {
 const { marshall, unmarshall } = require('@aws-sdk/util-dynamodb');
 const client = new DynamoDBClient();
 const getEmployeeDetail = async (event) => {
+  console.log('event', event);
   const response = { statusCode: 200 };
   try {
     const params = {
